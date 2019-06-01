@@ -29,9 +29,56 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+Type checking data in JavaScript is important because it is a dynamically typed language which can can lead to unexpected behavior if the wrong data type is passed to a component. For example, and number could be interpreted as a sting by mistake. 
+
+PropTypes allow developers to specify the type of data that is passed between components. 
+
+Although PropTypes are not required they can make components easier to understand when a developer is reading another developer's code, and they can save them from many common programming mistakes.
+
 - [ ] Describe a life-cycle event in React?
+
+React life-cycle events have three phases. Each of these phases have their own lifecycle methods which are called on components to updated the state and UI of an application.
+
+* Phase 1 - Mounting
+  * constructor
+  * render
+  * componentDidMount
+* Phase 2 - Updating
+  * setState
+  * componentDidUpdate
+  *shouldCompnentUpdate
+* Phase 3 - Unmounting
+  *componentWillUnmount
+
 - [ ] Explain the details of a Higher Order Component?
+
+Higher order components are functions which take components as arguments and then return a new component. HOCs conditionally render components based on their logic. For example, to create a compnent which greets a user based on if they are logged in or not you can encapsulate the logic within a compnent like this:
+
+```javascript
+
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn) {
+        return <UserGreeting />;
+    }
+    return <GuestGreeting />
+}
+
+ReactDOM.render(
+    <Greeting isLoggedIn={false} />,
+    document.getElementById('root')
+);
+```
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+
+The three ways to style React components are:
+
+1. With a traditional CSS style sheet - This method is great for beginners because it's easy to understand and apply to a React project.
+2. Inline CSS - For a simple application this method doesn't bring any unnecessary complexity to a project.
+3. Styled components - A library for React that allows you to write CSS in JS files. Two of the biggest benefits of this method are that it isolates CSS and it allows for unit testing.
 
 ## Project Setup
 
