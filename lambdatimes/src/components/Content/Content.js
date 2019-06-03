@@ -18,6 +18,10 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    });
   }
 
   changeSelected = tab => {
@@ -31,7 +35,6 @@ export default class Content extends Component {
       
       Notice that we're passing this function to our <Cards /> component below.
       This function returns an array of cards, so we can just pass it down as such.
-
       Your algorithim for the logic here is as follows: 
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
