@@ -40,16 +40,16 @@ Although PropTypes are not required they can make components easier to understan
 
 React life-cycle events have three phases. Each of these phases have their own lifecycle methods which are called on components to updated the state and UI of an application.
 
-* Phase 1 - Mounting
-  * constructor
-  * render
-  * componentDidMount
-* Phase 2 - Updating
-  * setState
-  * componentDidUpdate
-  *shouldCompnentUpdate
-* Phase 3 - Unmounting
-  *componentWillUnmount
+ * Phase 1 - Mounting
+    * constructor
+    * render
+    * componentDidMount
+ * Phase 2 - Updating
+    * setState
+    * componentDidUpdate
+    * shouldCompnentUpdate
+ * Phase 3 - Unmounting
+    * componentWillUnmount
 
 - [ ] Explain the details of a Higher Order Component?
 
