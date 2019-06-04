@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tab from './Tab';
 
-const Tabs = ({ tabs, selectedTab, selectTabHandler }) => {
+const Tabs = props => {
+  const { tabs, selectedTab, selectTabHandler } = props;
   return (
     <div className="tabs">
       <div className="topics">
